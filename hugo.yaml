@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://loremipsum.com/"
 title: The Index
 paginate: 5
 theme: PaperMod
@@ -7,12 +7,17 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+pygmentsUseClasses: true
+
+googleAnalytics: G-123-45
 
 minify:
   disableXML: true
   minifyOutput: true
 
 params:
+  ignoreErrors: error-remote-getjson
+  githubUser: "Samestora"
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: The Index
   description: "The Index is Samestora's website"
@@ -28,7 +33,7 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -41,7 +46,7 @@ params:
   tocopen: false
 
   assets:
-    disableHLJS: true # to disable highlight.js
+    disableHLJS: false # to disable highlight.js
     disableFingerprinting: true
     favicon: "https://avatars.githubusercontent.com/u/99408454?v=4"
     favicon16x16: "https://avatars.githubusercontent.com/u/99408454?v=4"
@@ -50,7 +55,7 @@ params:
     safari_pinned_tab: "https://avatars.githubusercontent.com/u/99408454?v=4"
 
   label:
-    text: "The Index"
+    text: "~/The Index"
 
   # profile-mode
   profileMode:
@@ -79,6 +84,10 @@ params:
   socialIcons:
     - name: linkedin
       url: "https://linkedin.com/in/putrantosurya"
+    - name: medium
+      url: "https://medium.com/@putrantosurya38/"
+    - name: email
+      url: "mailto:putrantosurya@tutamail.com"
     - name: github
       url: "https://github.com/Samestora"
 
@@ -92,7 +101,7 @@ params:
 
   cover:
     hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
+    hiddenInList: false # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
   # for search
@@ -126,6 +135,14 @@ menu:
       name: Tags
       url: /tags/
       weight: 3
+    - identifier: repository
+      name: Repository
+      url: /repository/
+      weight: 4
+    - name: archives
+      name: Archives
+      url: "/archives/"
+      weight: 5
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true

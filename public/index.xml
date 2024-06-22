@@ -23,5 +23,20 @@ $ sudo netdiscover i retrieved the machine as 192.168.3.16, now let&amp;rsquo;s 
 $ nmap 192.168.3.16 -A Now we get 80 and 22 which means it has a website and an SSH open for us, let&amp;rsquo;s check the website
 192.168.3.16:80 it prompts us to add coddeeaddicts.</description>
     </item>
+    <item>
+      <title>Working on RSS</title>
+      <link>http://localhost:1313/posts/2/</link>
+      <pubDate>Sat, 22 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2/</guid>
+      <description>What i&amp;rsquo;ve been working on Hello there, i&amp;rsquo;m trying to setup my RSS feed to linked with my github pages, so stay tuned
+anyway here&amp;rsquo;s a mouse hope you&amp;rsquo;re happy :D</description>
+    </item>
+    <item>
+      <title>Repository</title>
+      <link>http://localhost:1313/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/repository/</guid>
+      <description>repository</description>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,51 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>
+    {{ .Title }}
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages := union .RegularPages .Sections }}
+
+{{ $githubUser := .Site.Params.githubUser }}
+
+{{ $options := dict
+  "method" "GET"
+  "headers" (dict "Accept" "application/vnd.github.v3+json")
+}}
+
+<div class="projects-section">
+  <br>
+  <div class="portfolio-projects">
+    {{ with resources.GetRemote (printf "https://api.github.com/users/%s/repos" $githubUser) $options }}
+      {{ with .Content }}
+        {{ $json := transform.Unmarshal . }}
+        {{ range $json }}
+          <div class="project">
+            <div class="project-header">
+              <i class="fa-regular fa-folder-open folder-icon"></i>
+              <div class="small-icons">
+                <a href="{{ .html_url }}">
+                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <h3>{{ .name }}</h3>
+            <p>{{ .description }}</p>
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+{{- end }}
+{{/* end main */}}
