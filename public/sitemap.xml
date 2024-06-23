@@ -2,34 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/archives/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/boot2root/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/1/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ctf/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vulnhub/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/write-up/</loc>
+    <lastmod>2024-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/repository/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/updates/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/updates/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/vulnhub/</loc>
-  </url><url>
     <loc>http://localhost:1313/posts/2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/write-up/</loc>
   </url>
 </urlset>

@@ -25,7 +25,7 @@ params:
   author: "Samestora"
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 1, 2024"
+  DateFormat: "1 January 2006" # Can't change this why? Hugo sucks
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 

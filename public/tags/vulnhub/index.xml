@@ -11,11 +11,12 @@
     </image>
     <generator>Hugo -- 0.127.0</generator>
     <language>en</language>
+    <lastBuildDate>Sat, 22 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/vulnhub/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coffee Addicts : Write Up</title>
       <link>http://localhost:1313/posts/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 22 Jun 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/1/</guid>
       <description>The challenge is based on : https://www.vulnhub.com/entry/coffee-addicts-1,699/ another vulnhub boot2root machine, well let&amp;rsquo;s get started! first of all let&amp;rsquo;s use netdiscover to see where the machine is.
 $ sudo netdiscover i retrieved the machine as 192.168.3.16, now let&amp;rsquo;s enumerate it with nmap.
