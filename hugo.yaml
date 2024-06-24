@@ -25,7 +25,7 @@ params:
   author: "Samestora"
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "1 January 2006" # Can't change this why? Hugo sucks
+  DateFormat: "2 January 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
@@ -46,7 +46,7 @@ params:
   tocopen: false
 
   assets:
-    disableHLJS: false # to disable highlight.js
+    disableHLJS: true # to disable highlight.js
     disableFingerprinting: true
     favicon: "https://avatars.githubusercontent.com/u/99408454?v=4"
     favicon16x16: "https://avatars.githubusercontent.com/u/99408454?v=4"
@@ -125,7 +125,7 @@ outputs:
     - JSON # necessary for search
 menu:
   main:
-    - identifier: archives
+    - identifier: lookup
       name: Lookup
       url: "/lookup/"
       weight: 1
@@ -133,15 +133,14 @@ menu:
       name: Categories
       url: /categories/
       weight: 2
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 3
     - identifier: repository
       name: Repository
       url: /repository/
-      weight: 4
+      weight: 3
 
+taxonomies:
+  category: categories
+  tag: tags
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -149,7 +148,7 @@ markup:
   highlight:
     noClasses: false
     # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
+    codeFences: true
+    guessSyntax: true
     # lineNos: true
-    # style: monokai
+    style: monokai
