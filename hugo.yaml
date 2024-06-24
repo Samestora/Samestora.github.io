@@ -125,9 +125,9 @@ outputs:
     - JSON # necessary for search
 menu:
   main:
-    - identifier: lookup
-      name: Lookup
-      url: "/lookup/"
+    - identifier: directory
+      name: Directory
+      url: "/directory/"
       weight: 1
     - identifier: categories
       name: Categories
