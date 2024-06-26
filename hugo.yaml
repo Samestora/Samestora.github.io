@@ -129,9 +129,9 @@ menu:
       name: Directory
       url: "/directory/"
       weight: 1
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: legend
+      name: Legend
+      url: /legend/
       weight: 2
     - identifier: repository
       name: Repository

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<header class="page-header legend">
+    <h1>{{.Title}} <i class="fa-solid fa-network-wired"></i></h1>
+</header>
+
+<header class="page-header">
+    <h2>Categories</h2>
+</header>
+
+<ul class="terms-tags">
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li>
+        <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} <sup><strong><sup>{{ len $taxonomy.Pages }}</sup></strong></sup></a>
+    </li>
+    {{ end }}
+</ul>
+
+<header class="page-header">
+    <h2>Tags</h2>
+</header>
+<ul class="terms-tags">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <li>
+        <a href="{{ "tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}<sup><strong><sup>{{ len $taxonomy.Pages }}</sup></strong></sup></a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

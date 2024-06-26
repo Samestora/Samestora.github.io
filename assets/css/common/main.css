@@ -120,3 +120,7 @@ pre:hover .copy-code {
     margin-bottom: 10px;
     color: #b3b3b3;
 }
+
+.legend h1 i{
+    color: #FFCC17;
+}
