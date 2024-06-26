@@ -1,4 +1,4 @@
-baseURL: ${BASE_URL}
+baseURL: "$HUGO_BASEURL"
 title: The Index
 paginate: 5
 theme: PaperMod
