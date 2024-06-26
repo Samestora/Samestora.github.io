@@ -8,7 +8,7 @@ cover:
   image: "/title/cover.png"
   # can also paste direct link from external site
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-  alt: "RSS"
-  caption: "RSS"
+  alt: "alt"
+  caption: "caption"
   relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---

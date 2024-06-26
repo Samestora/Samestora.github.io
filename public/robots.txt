@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://loremipsum.com/sitemap.xml
