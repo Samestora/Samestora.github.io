@@ -1,4 +1,4 @@
-baseURL: "https://loremipsum.com"
+baseURL: "{{ .Environment.BASE_URL }}"
 title: The Index
 paginate: 5
 theme: PaperMod
