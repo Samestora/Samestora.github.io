@@ -1,4 +1,4 @@
-baseURL: "https://the-index-zeta.vercel.app/"
+baseURL: ${BASE_URL}
 title: The Index
 paginate: 5
 theme: PaperMod
