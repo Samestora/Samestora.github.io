@@ -15,9 +15,9 @@
     <atom:link href="http://localhost:1313/tags/updates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working on RSS</title>
-      <link>http://localhost:1313/posts/2/</link>
+      <link>http://localhost:1313/posts/working-on-rss/</link>
       <pubDate>Sat, 22 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2/</guid>
+      <guid>http://localhost:1313/posts/working-on-rss/</guid>
       <description>What i&amp;rsquo;ve been working on Hello there, i&amp;rsquo;m trying to setup my RSS feed to linked with my github pages, so stay tuned
 anyway here&amp;rsquo;s a mouse hope you&amp;rsquo;re happy :D</description>
     </item>

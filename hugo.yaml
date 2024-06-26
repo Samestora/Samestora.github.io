@@ -141,6 +141,8 @@ menu:
 taxonomies:
   category: categories
   tag: tags
+permalinks:
+    posts: "/:sections[last]/:slug/"
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
