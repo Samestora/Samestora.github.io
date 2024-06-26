@@ -1,4 +1,4 @@
-baseURL: "https://loremipsum.com/"
+baseURL: ""
 title: The Index
 paginate: 5
 theme: PaperMod
@@ -7,7 +7,6 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-pygmentsUseClasses: true
 
 googleAnalytics: G-123-45
 
