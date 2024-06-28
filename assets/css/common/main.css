@@ -40,6 +40,14 @@
     width: 26px;
 }
 
+.social-icons a svg:hover {
+    stroke: var(--header-icon);
+}
+
+.social-icons a .svg-fill:hover{
+    fill: var(--header-icon);
+}
+
 code {
     direction: ltr;
 }
@@ -92,8 +100,8 @@ pre:hover .copy-code {
 }
 
 .folder-icon {
-    font-size: 35px;
-    color: #FFCC17;
+    font-size: 40px;
+    color: var(--header-icon);
 }
 
 .small-icons {
@@ -107,7 +115,7 @@ pre:hover .copy-code {
 }
 
 .small-icons i:hover {
-    color: #FFCC17;
+    color: var(--header-icon);
 }
 
 .project h3 {
@@ -121,6 +129,15 @@ pre:hover .copy-code {
     color: #b3b3b3;
 }
 
-.legend h1 i{
-    color: #FFCC17;
+.fa-list{
+    font-size: 28px;
+    color: var(--header-icon);
+}
+
+.directory-header svg{
+    stroke: var(--header-icon);
+}
+
+.fa-database{
+    color: var(--header-icon);
 }

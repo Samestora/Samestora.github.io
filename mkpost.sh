@@ -9,7 +9,7 @@ fi
 currentyear=$(date +"%Y")
 
 # if command is correct
-hugo new posts/"$1".md
+hugo new posts/"$currentyear"/"$1".md
 mkdir static/"$currentyear"/"$1"
 
 
