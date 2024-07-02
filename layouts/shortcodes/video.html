@@ -1,0 +1,67 @@
+{{- /*  hugo-video shortcode
+/*
+/*    This file is a modified part of hugo-video shortcode.
+/*    A Hugo component shortcode to embed videos using the HTML video element.
+/*    
+/*    Original :
+/*    @copyright  @2019 onwards Nicolas Martignoni (nicolas@martignoni.net)
+/*    @source     https://github.com/martignoni/hugo-video
+/*    @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+/*
+*/ -}}
+
+{{- $video_src := .Get "src" -}}
+{{- $video_mp4 := "" -}}
+{{- $video_webm := "" -}}
+{{- $video_ogg := "" -}}
+{{- $video_dl := "" -}}
+{{- $width := "100%" -}}
+{{- $filenotfound := true -}}
+{{- $unsupportedfile := true -}}
+
+{{- /* Define the path to the static directory */ -}}
+{{- $static_path := printf "%s" $video_src -}}
+
+{{- /* Check if the MP4 file exists */ -}}
+{{- if fileExists (printf "static%s.mp4" $static_path) -}}
+  {{- $filenotfound = false -}}
+  {{- $unsupportedfile = false -}}
+  {{- $video_mp4 = printf "%s.mp4" $static_path -}}
+{{- end -}}
+
+{{- /* Check if the WebM file exists */ -}}
+{{- if fileExists (printf "static%s.webm" $static_path) -}}
+  {{- $filenotfound = false -}}
+  {{- $unsupportedfile = false -}}
+  {{- $video_webm = printf "%s.webm" $static_path -}}
+{{- end -}}
+
+{{- /* Check if the Ogg file exists */ -}}
+{{- if fileExists (printf "static%s.ogv" $static_path) -}}
+  {{- $filenotfound = false -}}
+  {{- $unsupportedfile = false -}}
+  {{- $video_ogg = printf "%s.ogv" $static_path -}}
+{{- end -}}
+
+{{- if $filenotfound -}}
+  {{- /* No file of given name was found, we stop here. */ -}}
+  {{- errorf "No file with filename %q found." $video_src -}}
+{{- else if $unsupportedfile -}}
+  {{- errorf "No valid video file with filename %q found." $video_src -}}
+{{- else -}}
+<video {{ if ne (.Get "controls") "false" }}controls {{ end }}preload="auto" width="{{ or (.Get "width") $width }}" {{ with .Get "height" }}height="{{.}}"{{ end }} {{ if eq (.Get "autoplay") "true" }}autoplay {{ end }}{{ if eq (.Get "loop") "true" }}loop {{ end }}{{ if eq (.Get "muted") "true" }}muted {{ end }}playsinline class="html-video">
+  {{- with $video_webm }}
+    <source src="{{ . }}" type="video/webm">
+    {{- $video_dl = . -}}
+  {{- end }}
+  {{- with $video_ogg }}
+    <source src="{{ . }}" type="video/ogg">
+    {{- $video_dl = . -}}
+  {{- end }}
+  {{- with $video_mp4 }}
+    <source src="{{ . }}" type="video/mp4">
+    {{- $video_dl = . -}}
+  {{- end }}
+  <span>{{ i18n "videoUnsupported" $video_dl | safeHTML}}</span>
+</video>
+{{- end -}}
