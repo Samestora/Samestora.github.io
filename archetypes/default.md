@@ -1,11 +1,11 @@
 ---
-title: "title"
-date: "{{ now.Format "2006-01-02" }}"
+title: "{{ replace .File.ContentBaseName `-` ` ` | title }}"
+date: "{{ now.Format "2006-01-02T15:04:00+07:00" }}"
 draft: false
 categories: ""
 tags: []
 cover:
-  image: "/title/cover.png"
+  image: "/{{ now.Year }}/{{ replace .File.ContentBaseName `-` ` ` | title }}/cover.png"
   # can also paste direct link from external site
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
   alt: "alt"
