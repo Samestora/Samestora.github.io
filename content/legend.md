@@ -1,4 +1,4 @@
 ---
-title: "Tags and Categories"
-type: legend
+layout: legend
+url: "/legend/"
 ---
