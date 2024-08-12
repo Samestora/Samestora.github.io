@@ -16,7 +16,7 @@ mkdir static/"$currentyear"/"$1"
 # if it's possible to do so...
 if [ $? -eq 0 ]; then
     echo "Openning..."
-    codium content/posts/"$currentyear"/"$1".md
+    nvim content/posts/"$currentyear"/"$1".md
 else
     echo "Post failed!"
 fi
